@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="560" viewBox="0 0 360 560">
+  <rect width="100%" height="100%" fill="#f0ebe2"/>
+  <rect x="40" y="48" width="280" height="420" rx="4" fill="#faf7f0" stroke="#dcd5c8" stroke-width="1"/>
+  <path d="M180 120c-28 52-50 118-50 188 0 56 22 102 50 102s50-46 50-102c0-70-22-136-50-188z" fill="#dfe8c8" stroke="#b8c49a" stroke-width="1"/>
+  <circle cx="150" cy="220" r="5" fill="#a6b06a" opacity="0.35"/>
+  <circle cx="210" cy="260" r="4" fill="#a6b06a" opacity="0.3"/>
+  <text x="50%" y="92%" dominant-baseline="middle" text-anchor="middle" fill="#9a958a" font-family="system-ui,sans-serif" font-size="13" letter-spacing="0.08em">study</text>
+</svg>

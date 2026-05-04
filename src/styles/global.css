@@ -1,0 +1,26 @@
+@import "tailwindcss";
+@config "../../tailwind.config.mjs";
+
+@theme {
+	--color-cream: #fcf9f2;
+	--color-ink: #1a1a1a;
+
+	--font-serif: "EB Garamond", "Garamond", "Palatino Linotype", Palatino, "Times New Roman",
+		serif;
+
+	--tracking-sans: 0.1em;
+}
+
+@layer base {
+	html {
+		@apply scroll-smooth bg-cream text-ink antialiased;
+	}
+
+	body {
+		@apply min-h-dvh bg-cream font-serif text-base font-normal leading-relaxed;
+	}
+
+	a {
+		@apply underline-offset-4 transition-opacity hover:opacity-70;
+	}
+}

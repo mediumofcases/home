@@ -1,0 +1,28 @@
+---
+const { currentPath = "" } = Astro.props;
+const isInfo = currentPath === "/info";
+---
+
+<header
+	class="fixed inset-x-0 top-0 z-40 flex items-center justify-between bg-cream/85 px-6 py-5 backdrop-blur-sm md:px-10"
+>
+	<a
+		href="/"
+		class="font-sans text-sm font-medium lowercase tracking-[var(--tracking-sans)] text-ink no-underline hover:opacity-70"
+	>
+		boyoung
+	</a>
+	<nav
+		class="flex gap-8 font-sans text-sm font-medium lowercase tracking-[var(--tracking-sans)] md:gap-12"
+	>
+		<a
+			href="https://mediumofcases.bigcartel.com/"
+			class="text-ink no-underline"
+			target="_blank"
+			rel="noopener noreferrer"
+		>
+			shop
+		</a>
+		<a href="/info" class:list={["text-ink no-underline", isInfo && "opacity-50"]}> info </a>
+	</nav>
+</header>

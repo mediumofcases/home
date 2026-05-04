@@ -1,0 +1,101 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="boyoung — info" currentPath="/info">
+	<div class="mx-auto max-w-6xl px-5 pb-24 pt-2 md:px-10 md:pt-4">
+		<div class="grid gap-12 md:grid-cols-12 md:gap-10 lg:gap-14">
+			<div class="md:col-span-7 lg:col-span-8">
+				<section class="mb-12 md:mb-16">
+					<h1
+						class="mb-4 font-serif text-xl font-medium normal-case tracking-normal text-ink md:text-2xl"
+					>
+						Description of myself as an artist.
+					</h1>
+					<div
+						class="font-serif text-[0.98rem] leading-[1.65] text-ink/90 md:text-[1.02rem]"
+					>
+						<p>
+							I work slowly, with graphite and color on paper, letting forms emerge from
+							repeated marks and small accidents. My practice sits between observation and
+							invention: lilies, hands, and domestic light return often, less as symbols than as
+							temperatures and weights on the page. I am interested in surfaces that feel almost
+							fragile—where the image could dissolve if you looked away—and in the small drama of
+							edges, smudges, and halftones that refuse to behave.
+						</p>
+						<p class="mt-4">
+							Recent bodies of work gather botanical studies alongside fragments of text and
+							pattern, treating the sheet as a room you can walk around in. Exhibitions and
+							editions are kept intentionally intimate; the shop holds prints and objects that
+							extend these drawings into daily life. This site is a quiet index of those pieces,
+							offered without hurry.
+						</p>
+					</div>
+				</section>
+
+				<section>
+					<h2
+						class="mb-4 font-serif text-xl font-medium normal-case tracking-normal text-ink md:text-2xl"
+					>
+						Description of myself as an artist in korean
+					</h2>
+					<div
+						class="font-serif text-[0.98rem] leading-[1.75] text-ink/90 md:text-[1.02rem] [&_p+p]:mt-4"
+					>
+						<p>
+							저는 종이 위에서 연필과 색을 천천히 겹쳐가며 형태를 드러내는 작업을 합니다. 관찰과
+							상상 사이에서 백합, 손, 집 안의 빛 같은 소재가 반복되는데, 이들은 상징이라기보다
+							온도와 무게처럼 느껴지길 바랍니다. 시선을 돌리면 이미지가 스르르 사라질 듯한 표면,
+							번지는 선과 얼룩의 작은 극적 순간에 관심이 있습니다.
+						</p>
+						<p>
+							최근 작업은 식물 스케치와 짧은 글귀, 무늬의 단편을 한 장의 방처럼 배치하는 방식에
+							가깝습니다. 전시와 에디션은 소규모로 유지하고, 샵에서는 일상으로 닿는 판화와 오브제를
+							소개합니다. 이 웹사이트는 그 기록을 천천히 엮어 둔 색인입니다.
+						</p>
+					</div>
+				</section>
+			</div>
+
+			<aside class="flex flex-col gap-10 md:col-span-5 lg:col-span-4">
+				<div>
+					<h2 class="sr-only">contact</h2>
+					<ul
+						class="space-y-3 font-sans text-sm font-medium lowercase tracking-[var(--tracking-sans)] text-ink"
+					>
+						<li>
+							<a href="mailto:hello@example.com" class="text-ink no-underline hover:opacity-70">
+								hello@example.com
+							</a>
+						</li>
+						<li>
+							<a
+								href="https://www.instagram.com/"
+								class="text-ink no-underline hover:opacity-70"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								instagram
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="mt-auto">
+					<div
+						class="aspect-square max-w-sm overflow-hidden rounded-sm border border-black/5 bg-white shadow-sm"
+					>
+						<img
+							src="/info-feature.svg"
+							alt=""
+							class="h-full w-full object-cover"
+							width="400"
+							height="400"
+							loading="lazy"
+						/>
+					</div>
+				</div>
+			</aside>
+		</div>
+	</div>
+</BaseLayout>
