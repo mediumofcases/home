@@ -32,13 +32,13 @@ function DraggableSticker({
 }) {
 	return (
 		<motion.div
-			className="pointer-events-auto absolute h-14 w-14 cursor-grab touch-none overflow-hidden rounded-sm border border-black/10 bg-white shadow-md active:cursor-grabbing md:h-16 md:w-16"
+			className="pointer-events-auto absolute h-14 w-14 cursor-grab touch-none overflow-hidden rounded-sm border border-black/10 bg-white active:cursor-grabbing md:h-16 md:w-16"
 			style={{ left: `${initialXPct}%`, top: `${initialYPct}%` }}
 			drag
 			dragConstraints={constraintsRef}
 			dragElastic={0.12}
 			dragMomentum={false}
-			whileDrag={{ scale: 1.03, zIndex: 35, boxShadow: "0 12px 28px rgba(0,0,0,0.12)" }}
+			whileDrag={{ scale: 1.03, zIndex: 35 }}
 		>
 			<img src={src} alt="" className="h-full w-full object-cover select-none" draggable={false} />
 		</motion.div>
@@ -61,7 +61,7 @@ function WorkModal({ work, onClose }: { work: WorkItem; onClose: () => void }) {
 				onClick={onClose}
 			/>
 			<motion.div
-				className="pointer-events-auto relative my-6 flex max-h-[calc(100dvh-3rem)] w-full max-w-lg shrink-0 flex-col overflow-y-auto rounded-sm bg-cream px-5 pb-8 pt-6 shadow-[0_8px_40px_rgba(0,0,0,0.08)] md:my-10 md:max-h-[calc(100dvh-5rem)] md:max-w-2xl md:px-8"
+				className="pointer-events-auto relative my-6 flex max-h-[calc(100dvh-3rem)] w-full max-w-lg shrink-0 flex-col overflow-y-auto rounded-sm bg-cream px-5 pb-8 pt-6 md:my-10 md:max-h-[calc(100dvh-5rem)] md:max-w-2xl md:px-8"
 				initial={{ y: 16, opacity: 0 }}
 				animate={{ y: 0, opacity: 1 }}
 				exit={{ y: 12, opacity: 0 }}
@@ -113,7 +113,7 @@ export default function HomePortfolio({ works, stickerSrcs }: Props) {
 	useEffect(() => {
 		setMounted(true);
 		const pool = stickerSrcs.length ? stickerSrcs : ["/favicon.svg"];
-		const count = Math.min(8, Math.max(5, pool.length * 2));
+		const count = 1;
 		const next: Array<{ key: string; src: string; x: number; y: number }> = [];
 		for (let i = 0; i < count; i++) {
 			next.push({
@@ -179,7 +179,7 @@ export default function HomePortfolio({ works, stickerSrcs }: Props) {
 								.join(" ")}
 							onClick={() => setSelected(w)}
 						>
-							<div className="overflow-hidden rounded-sm bg-white/60 transition-shadow duration-300 group-hover:shadow-[0_12px_36px_rgba(0,0,0,0.06)]">
+							<div className="overflow-hidden rounded-sm bg-white/60">
 								<img
 									src={w.thumbSrc}
 									alt=""
