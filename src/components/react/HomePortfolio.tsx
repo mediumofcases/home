@@ -141,7 +141,7 @@ export default function HomePortfolio({ works, stickerSrcs }: Props) {
 	}, [selected]);
 
 	return (
-		<div className="relative px-5 pb-16 pt-2 md:px-10 md:pt-4">
+		<div className="relative mx-auto w-[360px] pb-16 pt-2 md:w-[1180px] md:pt-4">
 			<div
 				ref={constraintsRef}
 				className="pointer-events-none fixed inset-0 z-20 overflow-hidden"
@@ -164,16 +164,16 @@ export default function HomePortfolio({ works, stickerSrcs }: Props) {
 					selected ? "pointer-events-none opacity-20" : "opacity-100"
 				}`}
 			>
-				<div className="columns-1 gap-x-6 gap-y-0 sm:columns-2 lg:columns-3 [&>*]:break-inside-avoid">
+				<div className="columns-1 gap-x-6 gap-y-0 md:columns-3 [&>*]:break-inside-avoid">
 					{works.map((w, i) => (
 						<button
 							key={w.id}
 							type="button"
 							className={[
-								"group mb-8 block w-full cursor-pointer text-left sm:mb-10",
-								i % 5 === 1 ? "sm:mt-8 lg:mt-12" : "",
-								i % 5 === 3 ? "sm:mt-4 lg:mt-8" : "",
-								i % 5 === 4 ? "lg:mt-4" : "",
+								"group mb-8 block w-full cursor-pointer text-left md:mb-10",
+								i % 5 === 1 ? "md:mt-12" : "",
+								i % 5 === 3 ? "md:mt-8" : "",
+								i % 5 === 4 ? "md:mt-4" : "",
 							]
 								.filter(Boolean)
 								.join(" ")}
