@@ -1,34 +1,20 @@
 ---
-import { getCollection } from "astro:content";
-import { getImage } from "astro:assets";
-import { marked } from "marked";
-import BaseLayout from "../layouts/BaseLayout.astro";
-import HomePortfolio from "../components/react/HomePortfolio";
-
-const raw = await getCollection("work");
-const sorted = [...raw].sort(
-	(a, b) => (a.data.order ?? 999) - (b.data.order ?? 999),
-);
-
-const works = await Promise.all(
-	sorted.map(async (entry) => {
-		const img = await getImage({ src: entry.data.thumbnail, width: 1200 });
-		const body = entry.body ?? "";
-		const bodyHtml = marked(body, { async: false });
-		return {
-			id: entry.id,
-			title: entry.data.title,
-			thumbSrc: img.src,
-			thumbWidth: Number(img.attributes.width ?? 800),
-			thumbHeight: Number(img.attributes.height ?? 1000),
-			bodyHtml,
-		};
-	}),
-);
-
-const stickerSrcs = works.map((w) => w.thumbSrc);
+import "../styles/global.css";
 ---
 
-<BaseLayout title="boyoung" currentPath="/">
-	<HomePortfolio client:load works={works} stickerSrcs={stickerSrcs} />
-</BaseLayout>
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>boyoung — 공사 중</title>
+		<link rel="stylesheet" href="https://use.typekit.net/qlq2sew.css" />
+	</head>
+	<body>
+		<main class="flex min-h-dvh items-center justify-center px-6">
+			<p class="font-sans text-[20pt] font-medium tracking-[var(--tracking-sans)] text-ink md:text-[30pt]">
+				준비 중입니다
+			</p>
+		</main>
+	</body>
+</html>
