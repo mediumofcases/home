@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stitch Drawing No.1</title>
+  <link rel="stylesheet" href="https://use.typekit.net/qlq2sew.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+  <style>
+.site-header {
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1920px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+  background: #fff;
+}
+@media (max-width: 900px) {
+  .site-header { padding: 1rem 1.5rem; }
+}
+.site-nav {
+  display: flex !important;
+  gap: 2rem;
+  position: static !important;
+  height: auto !important;
+  background: none !important;
+  padding: 0 !important;
+}
+.site-nav a {
+  font-family: 'menco', monospace !important;
+  font-size: 1.25rem !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.2em !important;
+  color: #111 !important;
+  text-decoration: none !important;
+}
+.site-nav a:hover { color: #0779fc !important; }
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+* {
+  font-family: 'menco', monospace !important;
+  font-weight: 300 !important;
+  letter-spacing: 0.2em !important;
+}
+html, body {
+  height: 100%;
+  overflow: hidden;
+  font-size: 1rem;
+  background: #fff;
+  color: #111;
+}
+img { display: block; }
+.fixed-top {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  background: #fff;
+}
+.project-nav {
+  padding: 0 2rem;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  font-weight: 500 !important;
+}
+.project-nav a { color: #b0b0b0; text-decoration: none; font-weight: 500 !important; }
+.project-nav a:hover { color: #0779fc; }
+.project-wrap {
+  position: fixed;
+  left: 0; right: 0; bottom: 0;
+  display: flex;
+  max-width: 1920px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.col-content {
+  width: 28%;
+  flex-shrink: 0;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 2rem 2rem 4rem;
+  line-height: 1.6;
+}
+.col-content::-webkit-scrollbar { display: none; }
+.col-content p:first-of-type { font-size: 1.2rem !important; font-weight: 500 !important; margin-top: -0.36rem !important; margin-bottom: 1.5rem !important; }
+.col-content p:nth-of-type(2) { font-weight: 500 !important; margin-bottom: 1.5rem !important; }
+.col-content .lang-kr p:first-of-type { font-size: 1em !important; font-weight: 300 !important; margin-top: 0 !important; }
+.col-content .lang-kr p:nth-of-type(2) { font-weight: 300 !important; }
+.col-content p { margin-bottom: 1.5rem; }
+.lang-en { }
+.lang-kr {
+  font-family: 'Pretendard', sans-serif !important;
+  font-size: 0.9em !important;
+  font-weight: 300 !important;
+  margin-top: calc(1.5rem * 1.3);
+  line-height: calc(1.6 * 1.1);
+}
+.lang-kr * {
+  font-family: 'Pretendard', sans-serif !important;
+  font-size: 1em !important;
+  font-weight: 300 !important;
+}
+.col-images {
+  flex: 1;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background: #fff;
+}
+.col-images::-webkit-scrollbar { display: none; }
+.col-images img, .col-images video {
+  width: 100%;
+  height: auto;
+  max-height: 80vh;
+  object-fit: contain;
+  object-position: right top;
+}
+.cover-mobile { display: none; }
+.mobile-remaining { display: none; }
+.mobile-remaining img {
+  width: calc(100% - 2rem);
+  height: auto;
+  display: block;
+  margin: 0 1rem 1rem;
+}
+@media (max-width: 900px) {
+  html, body { height: auto !important; overflow-x: hidden !important; overflow-y: auto !important; }
+  .cover-mobile { display: block; width: calc(100% - 2rem); height: auto; margin: 0 1rem 1rem; }
+  .project-wrap { position: static !important; display: block !important; height: auto !important; overflow: visible !important; }
+  .col-content { width: 100% !important; height: auto !important; overflow-y: visible !important; padding: 1.5rem 1rem 2rem; }
+  .col-images { display: none !important; }
+  .mobile-remaining { display: block !important; }
+}
+@media (min-width: 900px) {
+  .cover-mobile { display: none !important; }
+}
+</style>
+</head>
+<body>
+<div class="fixed-top" id="fixed-top">
+  <div class="site-header">
+  <a
+  href="/website/index.html"
+  style="
+    font-family: &quot;menco&quot;, monospace !important;
+    font-size: 1.25rem !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.2em !important;
+    color: #111 !important;
+    text-decoration: none !important;
+  "
+  >BOYOUNG</a
+>
+  <nav class="site-nav"><a href="/website/info.html" style="">info</a></nav>
+</div>
+  <div class="project-nav">
+    <span></span>
+    <span><a href="3_Times_1_Day.html">3 Times 1 Day &#8250;</a></span>
+  </div>
+</div>
+<img class="cover-mobile" src="../assets/projects/stitch%20drawing%20no.1/01_th_coaster-front_medium.jpg" alt="">
+<div class="project-wrap" id="project-wrap">
+  <div class="col-content">
+    <p>Stitch Drawing No.1</p>
+<p>2026</p>
+<p>A handmade fabric coaster stitched in Bali, created one intuitive stitch at a time</p>
+<p>The act of moving the needle—pausing with every single stitch—breaks away from habitual patterns, offering a space for deliberation. Within this slow rhythm, irregular and awkward shapes emerge; in this process, I met the pure joy of drawing again.</p>
+<p>Placed in your space, may they serve as a gentle, refreshing pause—a small interruption that slows down the pace of everyday life whenever you watch it.</p>
+<div class="lang-kr">
+<p>발리에서 만든 수제 차받침.</p>
+<p>손에 익은 기술을 내려놓고 가장 서툰 방식으로 그림을 그립니다. 완벽한 결과물을 만들기보다, 기술적 한계 속에서 마주하는 의도치 않은 형태들에 집중합니다.</p>
+<p>능숙한 재료와 도구를 사용할 때보다 훨씬 많은 시간이 들지만, 한 땀씩 멈추며 천천히 바늘을 옮기는 과정은 손에 밴 관성적인 움직임을 멈추고 고민할 틈을 줍니다. 그 느린 호흡 속에서 마주하는 우연하고 모난 형태들, 그 과정에서 그리기의 순수한 기쁨이 다시 발견됩니다.</p>
+<p>이 드로잉이 당신의 공간에 놓였을 때, 시선에 닿을 때마다 일상의 관성을 잠시 멈추게 하는 산뜻한 환기가 되어주기를 바랍니다.</p>
+</div>
+  </div>
+  <div class="col-images">
+    <img src="../assets/projects/stitch%20drawing%20no.1/01_th_coaster-front_medium.jpg" alt="">
+    <img src="../assets/projects/stitch%20drawing%20no.1/02_coaster-back_medium.jpg" alt="">
+  </div>
+</div>
+<div class="mobile-remaining">
+  <img src="../assets/projects/stitch%20drawing%20no.1/02_coaster-back_medium.jpg" alt="">
+</div>
+<footer
+  style="
+    padding: 2rem 2rem 1rem;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #aaa;
+    max-width: 1920px;
+    margin: 0 auto;
+    font-family: &quot;menco&quot;, monospace;
+  "
+>
+  &copy; 2026 Boyoung
+</footer>
+<script>
+  function setOffsets() {
+    var h = document.getElementById('fixed-top').offsetHeight;
+    var wrap = document.getElementById('project-wrap');
+    wrap.style.top = h + 'px';
+    var cover = document.querySelector('.cover-mobile');
+    if (cover) cover.style.marginTop = (h + 16) + 'px';
+  }
+  setOffsets();
+  window.addEventListener('resize', setOffsets);
+</script>
+</body>
+</html>
