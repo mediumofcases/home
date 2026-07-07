@@ -558,7 +558,7 @@ main { flex: 1; }
 <body>
 <div class="fixed-top" id="fixed-top">
   <div class="site-header">
-  <div class="site-logo"><a
+  <div class="site-logo"><a href="home.html" style="text-decoration:none;color:inherit"><a
   href="/"
   style="
     font-family: &quot;menco&quot;, monospace !important;
@@ -568,9 +568,8 @@ main { flex: 1; }
     color: #111 !important;
     text-decoration: none !important;
   "
-  >BOYOUNG</a
-> <span class="header-slash">/ shop</span></div>
-  <nav class="site-nav"><a href="/projects" class="">projects</a><a href="/shop" class="nav-active">shop</a><a href="/info" class="">info</a></nav>
+  >BOYOUNG</a <span class="header-slash">/ shop</span></a></div>
+  <nav class="site-nav"><a href="projects.html" class="">projects</a><a href="shop.html" class="nav-active">shop</a><a href="info.html" class="">info</a></nav>
 </div>
 </div>
 <main id="main-content">
@@ -826,7 +825,7 @@ document.getElementById('btn-place-order').addEventListener('click', function() 
   // if Apps Script URL is set, send; otherwise go straight to confirmation
   function goConfirm() {
     localStorage.removeItem('moc_cart');
-    location.href = '/confirmation';
+    location.href = 'confirmation.html';
   }
 
   if (APPS_SCRIPT_URL) {
