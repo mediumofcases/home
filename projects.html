@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>projects — BOYOUNG</title>
+  <link rel="stylesheet" href="https://use.typekit.net/qlq2sew.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+  <link rel="icon" href="/favicon.png">
+  <style>
+.site-header {
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1920px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+  background: #fff;
+}
+@media (max-width: 900px) {
+  .site-header { padding: 1rem 1.5rem; }
+}
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+  font-family: 'menco', monospace;
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  color: #111;
+  text-decoration: none;
+}
+.header-slash {
+  font-family: 'menco', monospace;
+  font-size: 1.25rem;
+  font-weight: 300;
+  letter-spacing: 0.2em;
+  color: #111;
+}
+.site-nav {
+  display: flex !important;
+  gap: 2rem;
+  position: static !important;
+  height: auto !important;
+  background: none !important;
+  padding: 0 !important;
+}
+.site-nav a {
+  font-family: 'menco', monospace !important;
+  font-size: 1.25rem !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.2em !important;
+  color: #111 !important;
+  text-decoration: none !important;
+}
+.site-nav a:hover, .site-nav a.nav-active { color: #4ABD9B !important; }
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'menco', monospace;
+  font-size: 1rem;
+  letter-spacing: 0.2em;
+  background: #fff;
+  color: #111;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+img { display: block; }
+main { flex: 1; }
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5rem 3rem;
+  padding: 4rem 3rem;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+@media (max-width: 900px) {
+  .gallery { grid-template-columns: 1fr; padding: 2rem 1.5rem; gap: 4rem; }
+}
+@media (min-width: 900px) and (max-width: 1200px) {
+  .gallery { grid-template-columns: repeat(2, 1fr); }
+}
+.card { text-decoration: none; color: #111; display: flex; justify-content: center; }
+.card-inner { display: inline-flex; flex-direction: column; align-items: center; width: 100%; max-width: 400px; }
+.card-thumb {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  position: relative;
+  background: transparent;
+}
+.card-thumb img {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%; max-height: 100%;
+  width: auto; height: auto;
+  display: block;
+  object-fit: contain;
+  transition: opacity 0.1s ease;
+  opacity: 1;
+}
+.slide-hidden { opacity: 0; }
+.card-meta { margin-top: 1rem; text-align: center; width: 100%; box-sizing: border-box; overflow-wrap: break-word; word-break: break-word; }
+.card-title { font-size: 1rem; font-weight: 500; line-height: 1.8; letter-spacing: 0.2em; }
+.card-sub { font-size: 0.85rem; color: #555; margin-top: .4rem; font-weight: 300; line-height: 1.6; letter-spacing: 0.15em; }
+.card:hover .card-title, .card:hover .card-sub { color: #4ABD9B; }
+.site-header { background: transparent !important; position: relative; z-index: 100; }
+
+
+#floater-1 {
+  position: fixed;
+  pointer-events: none;
+  z-index: 80;
+}</style>
+</head>
+<body>
+<div class="site-header">
+  <div class="site-logo"><a
+  href="/"
+  style="
+    font-family: &quot;menco&quot;, monospace !important;
+    font-size: 1.25rem !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.2em !important;
+    color: #111 !important;
+    text-decoration: none !important;
+  "
+  >BOYOUNG</a
+> <span class="header-slash">/ projects</span></div>
+  <nav class="site-nav"><a href="/projects" class="nav-active">projects</a><a href="/shop" class="">shop</a><a href="/info" class="">info</a></nav>
+</div>
+<img id="floater-1" src="/assets/aesthetics/floater-1.png" alt="">
+<main>
+  <div class="gallery">
+  <a class="card" href="/projects/stitch_drawing_no.1.html">
+    <div class="card-inner">
+      <div class="card-thumb"><img src="assets/projects/stitch%20drawing%20no.1/01_th_coaster-front_thumb.jpg" alt="Stitch Drawing No.1"></div>
+      <div class="card-meta">
+        <div class="card-title">Stitch Drawing No.1</div>
+        <div class='card-sub'>2026  A handmade fabric coaster stitched in Bali, created one intuitive stitch at a time</div>
+      </div>
+    </div>
+  </a>  <a class="card" href="/projects/3_Times_1_Day.html">
+    <div class="card-inner">
+      <div class="card-thumb card-slideshow"><img src="assets/projects/3%20Times%201%20Day/01_th_threetimesaday_3_thumb.png" alt="3 Times 1 Day" class="slide"><img src="assets/projects/3%20Times%201%20Day/02_th_threetimesaday_1_thumb.png" alt="3 Times 1 Day" class="slide slide-hidden"><img src="assets/projects/3%20Times%201%20Day/03_th_threetimesaday_2_thumb.png" alt="3 Times 1 Day" class="slide slide-hidden"><img src="assets/projects/3%20Times%201%20Day/04_th_threetimesaday_4_thumb.png" alt="3 Times 1 Day" class="slide slide-hidden"><img src="assets/projects/3%20Times%201%20Day/05_th_threetimesaday_5_thumb.png" alt="3 Times 1 Day" class="slide slide-hidden"></div>
+      <div class="card-meta">
+        <div class="card-title">3 Times 1 Day</div>
+        <div class='card-sub'>2025  A drawing practice for completing a sheet of paper across three sessions in one day</div>
+      </div>
+    </div>
+  </a>  <a class="card" href="/projects/Fashion_Girls.html">
+    <div class="card-inner">
+      <div class="card-thumb"><img src="assets/projects/Fashion%20Girls/01_th_fashion%20girl%201_thumb.png" alt="Fashion Girls"></div>
+      <div class="card-meta">
+        <div class="card-title">Fashion Girls</div>
+        <div class='card-sub'>2025  A series of illustrations inspired by fashionable girls</div>
+      </div>
+    </div>
+  </a>  <a class="card" href="/projects/landscapes.html">
+    <div class="card-inner">
+      <div class="card-thumb card-slideshow"><img src="assets/projects/landscapes/01_th_landscapes-1_thumb.png" alt="Landscapes" class="slide"><img src="assets/projects/landscapes/02_th_landscapes-2_thumb.png" alt="Landscapes" class="slide slide-hidden"><img src="assets/projects/landscapes/03_th_landscapes-3_thumb.png" alt="Landscapes" class="slide slide-hidden"><img src="assets/projects/landscapes/04_th_landscapes-4_thumb.png" alt="Landscapes" class="slide slide-hidden"><img src="assets/projects/landscapes/05_th_landscapes-5_thumb.png" alt="Landscapes" class="slide slide-hidden"></div>
+      <div class="card-meta">
+        <div class="card-title">Landscapes</div>
+        <div class='card-sub'>2025  A series of landscape drawings</div>
+      </div>
+    </div>
+  </a>  <a class="card" href="/projects/Bizarim.html">
+    <div class="card-inner">
+      <div class="card-thumb"><img src="assets/projects/Bizarim/01_th_Bizarim_thumb.png" alt="Bizarim"></div>
+      <div class="card-meta">
+        <div class="card-title">Bizarim</div>
+        <div class='card-sub'>2025
+An illustration inspired by Bizarim, Jeju</div>
+      </div>
+    </div>
+  </a>  <a class="card" href="/projects/What's_in_Bali.html">
+    <div class="card-inner">
+      <div class="card-thumb card-slideshow"><img src="assets/projects/What's%20in%20Bali/01_th_in%20bali%2012_thumb.png" alt="What's in Bali?" class="slide"><img src="assets/projects/What's%20in%20Bali/02_th_in%20bali%2014_thumb.png" alt="What's in Bali?" class="slide slide-hidden"><img src="assets/projects/What's%20in%20Bali/03_th_in%20bali%206_thumb.png" alt="What's in Bali?" class="slide slide-hidden"><img src="assets/projects/What's%20in%20Bali/04_th_in%20bali%204_thumb.png" alt="What's in Bali?" class="slide slide-hidden"><img src="assets/projects/What's%20in%20Bali/05_th_in%20bali%201_thumb.png" alt="What's in Bali?" class="slide slide-hidden"><img src="assets/projects/What's%20in%20Bali/06_th_in%20bali%2011_thumb.png" alt="What's in Bali?" class="slide slide-hidden"><img src="assets/projects/What's%20in%20Bali/07_th_in%20bali%202_thumb.png" alt="What's in Bali?" class="slide slide-hidden"><img src="assets/projects/What's%20in%20Bali/08_th_in%20bali%203_thumb.png" alt="What's in Bali?" class="slide slide-hidden"><img src="assets/projects/What's%20in%20Bali/09_th_in%20bali%205_thumb.png" alt="What's in Bali?" class="slide slide-hidden"></div>
+      <div class="card-meta">
+        <div class="card-title">What's in Bali?</div>
+        <div class='card-sub'>2025  Illustrations of animals, plants and dishes in Bali, 2025</div>
+      </div>
+    </div>
+  </a>  <a class="card" href="/projects/Crosswalk.html">
+    <div class="card-inner">
+      <div class="card-thumb"><img src="assets/projects/Crosswalk/01_th_crosswalk_thumb.png" alt="Crosswalk"></div>
+      <div class="card-meta">
+        <div class="card-title">Crosswalk</div>
+        <div class='card-sub'>2025  An illustration for children who wait for the signal at crosswalks</div>
+      </div>
+    </div>
+  </a>  <a class="card" href="/projects/Ladies'_Tea_Time.html">
+    <div class="card-inner">
+      <div class="card-thumb"><img src="assets/projects/Ladies'%20Tea%20Time/01_th_ladies'%20tea%20time_thumb.png" alt="Ladies' Tea Time"></div>
+      <div class="card-meta">
+        <div class="card-title">Ladies' Tea Time</div>
+        <div class='card-sub'>2025  An illustration for children who would like to have tea time with cool ladies</div>
+      </div>
+    </div>
+  </a>  <a class="card" href="/projects/Why_It_Rains.html">
+    <div class="card-inner">
+      <div class="card-thumb"><img src="assets/projects/Why%20It%20Rains/01_th_why%20it%20rains_thumb.png" alt="Why It Rains?"></div>
+      <div class="card-meta">
+        <div class="card-title">Why It Rains?</div>
+        <div class='card-sub'>2025  An illustration for children who wonder why it rains</div>
+      </div>
+    </div>
+  </a>  <a class="card" href="/projects/9_Endangered_Animals_in_Korea.html">
+    <div class="card-inner">
+      <div class="card-thumb card-slideshow"><img src="assets/projects/9%20Endangered%20Animals%20in%20Korea/01_th_endangered-9_thumb.png" alt="9 Endangered Animals in Korea" class="slide"><img src="assets/projects/9%20Endangered%20Animals%20in%20Korea/02_th_endangered-8_thumb.png" alt="9 Endangered Animals in Korea" class="slide slide-hidden"><img src="assets/projects/9%20Endangered%20Animals%20in%20Korea/03_th_endangered-7_thumb.png" alt="9 Endangered Animals in Korea" class="slide slide-hidden"><img src="assets/projects/9%20Endangered%20Animals%20in%20Korea/04_th_endangered-6_thumb.png" alt="9 Endangered Animals in Korea" class="slide slide-hidden"><img src="assets/projects/9%20Endangered%20Animals%20in%20Korea/05_th_endangered-5_thumb.png" alt="9 Endangered Animals in Korea" class="slide slide-hidden"><img src="assets/projects/9%20Endangered%20Animals%20in%20Korea/06_th_endangered-4_thumb.png" alt="9 Endangered Animals in Korea" class="slide slide-hidden"><img src="assets/projects/9%20Endangered%20Animals%20in%20Korea/07_th_endangered-3_thumb.png" alt="9 Endangered Animals in Korea" class="slide slide-hidden"><img src="assets/projects/9%20Endangered%20Animals%20in%20Korea/08_th_endangered-2_thumb.png" alt="9 Endangered Animals in Korea" class="slide slide-hidden"><img src="assets/projects/9%20Endangered%20Animals%20in%20Korea/09_th_endangered-1_thumb.png" alt="9 Endangered Animals in Korea" class="slide slide-hidden"></div>
+      <div class="card-meta">
+        <div class="card-title">9 Endangered Animals in Korea</div>
+        <div class='card-sub'>2025  Illustrations of endangered animals in Korea</div>
+      </div>
+    </div>
+  </a>  <a class="card" href="/projects/Windy_Day.html">
+    <div class="card-inner">
+      <div class="card-thumb card-slideshow"><img src="assets/projects/Windy%20Day/01_th_Windy-Day_thumb.png" alt="Windy Day" class="slide"><img src="assets/projects/Windy%20Day/02_th_Windy-Day_thumb.png" alt="Windy Day" class="slide slide-hidden"><img src="assets/projects/Windy%20Day/03_th_Windy-Day_thumb.png" alt="Windy Day" class="slide slide-hidden"></div>
+      <div class="card-meta">
+        <div class="card-title">Windy Day</div>
+        <div class='card-sub'>2025  A sequence illustration of a girl on a windy day</div>
+      </div>
+    </div>
+  </a>  <a class="card" href="/projects/Shiny_Eyes.html">
+    <div class="card-inner">
+      <div class="card-thumb"><img src="assets/projects/Shiny%20Eyes/01_th_banjak%20eyes-1_thumb.png" alt="Shiny Eyes"></div>
+      <div class="card-meta">
+        <div class="card-title">Shiny Eyes</div>
+        <div class='card-sub'>2025  A series of illustrations with shiny eyes.</div>
+      </div>
+    </div>
+  </a>  <a class="card" href="/projects/who_are_gathered.html">
+    <div class="card-inner">
+      <div class="card-thumb"><img src="assets/projects/who%20are%20gathered/01_th_book-front_thumb.png" alt="who (are) gathered?"></div>
+      <div class="card-meta">
+        <div class="card-title">who (are) gathered?</div>
+        <div class='card-sub'>2025  A collection of the animals and plants featured in ｢house gathering｣</div>
+      </div>
+    </div>
+  </a>  <a class="card" href="/projects/gathering_room.html">
+    <div class="card-inner">
+      <div class="card-thumb"><img src="assets/projects/gathering%20room/01_th_book-front_thumb.png" alt="gathering room"></div>
+      <div class="card-meta">
+        <div class="card-title">gathering room</div>
+        <div class='card-sub'>2025  A book composed of the individual rooms from <｢house gathering｣</div>
+      </div>
+    </div>
+  </a>  <a class="card" href="/projects/house_gathering.html">
+    <div class="card-inner">
+      <div class="card-thumb"><img src="assets/projects/house%20gathering/01_th_IMG_9628_thumb.png" alt="house gathering"></div>
+      <div class="card-meta">
+        <div class="card-title">house gathering</div>
+        <div class='card-sub'>2025  A solo exhibition ｢house gathering｣</div>
+      </div>
+    </div>
+  </a>  <a class="card" href="/projects/wrapping_paper.html">
+    <div class="card-inner">
+      <div class="card-thumb"><img src="assets/projects/wrapping%20paper/th_wrapping%20paper%20for%20shop%20makers_0_thumb.png" alt="Wrapping Paper"></div>
+      <div class="card-meta">
+        <div class="card-title">Wrapping Paper</div>
+        <div class='card-sub'>2024  Wrapping paper design for Shop Makers.</div>
+      </div>
+    </div>
+  </a>  <a class="card" href="/projects/Nabi_Face.html">
+    <div class="card-inner">
+      <div class="card-thumb"><img src="assets/projects/Nabi%20Face/th_nabi%20face_thumb.png" alt="Nabi Face"></div>
+      <div class="card-meta">
+        <div class="card-title">Nabi Face</div>
+        <div class='card-sub'>2024  A moving illustration of faces with butterfly wings</div>
+      </div>
+    </div>
+  </a>  <a class="card" href="/projects/1004_dog.html">
+    <div class="card-inner">
+      <div class="card-thumb"><img src="assets/projects/1004%20dog/th_1004%20dog_thumb.png" alt="1004 dog"></div>
+      <div class="card-meta">
+        <div class="card-title">1004 dog</div>
+        <div class='card-sub'>2024  A moving illustration of an angel dog and others</div>
+      </div>
+    </div>
+  </a>  <a class="card" href="/projects/gazpacho_party_invitation.html">
+    <div class="card-inner">
+      <div class="card-thumb"><img src="assets/projects/gazpacho%20party%20invitation/th_gazpacho%20party%20invitation_thumb.jpg" alt="gazpacho party invitation"></div>
+      <div class="card-meta">
+        <div class="card-title">gazpacho party invitation</div>
+        <div class='card-sub'>2024  An invitation card for gazpacho party.</div>
+      </div>
+    </div>
+  </a>
+  </div>
+</main>
+<footer
+  style="
+    padding: 2rem 2rem 1rem;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #aaa;
+    max-width: 1920px;
+    margin: 0 auto;
+    font-family: &quot;menco&quot;, monospace;
+  "
+>
+  &copy; 2026 Boyoung
+</footer>
+<script>
+
+(function() {
+  var el = document.getElementById('floater-1');
+  if (!el) return;
+  var size = Math.min(window.innerWidth, window.innerHeight) * 0.25;
+  el.style.width = size + 'px';
+  var x = Math.random() * (window.innerWidth - size);
+  var y = Math.random() * (window.innerHeight - size);
+  var dx = 1.2, dy = 1.2;
+  function step() {
+    x += dx; y += dy;
+    var maxX = window.innerWidth - size;
+    var maxY = window.innerHeight - size;
+    if (x <= 0)    { x = 0;    dx =  Math.abs(dx); }
+    if (x >= maxX) { x = maxX; dx = -Math.abs(dx); }
+    if (y <= 0)    { y = 0;    dy =  Math.abs(dy); }
+    if (y >= maxY) { y = maxY; dy = -Math.abs(dy); }
+    el.style.left = x + 'px';
+    el.style.top  = y + 'px';
+    requestAnimationFrame(step);
+  }
+  step();
+})();
+</script>
+<script>
+(function() {
+  document.querySelectorAll('.card-slideshow').forEach(function(el) {
+    var slides = Array.from(el.querySelectorAll('.slide'));
+    if (slides.length < 2) return;
+    slides.forEach(function(s, i) { s.style.opacity = i === 0 ? '1' : '0'; });
+    var current = 0;
+    function next() {
+      var prev = current;
+      current = (current + 1) % slides.length;
+      slides[prev].style.opacity = '0';
+      slides[current].style.opacity = '1';
+      setTimeout(next, 1500 + Math.random() * 500);
+    }
+    setTimeout(next, 1500 + Math.random() * 500);
+  });
+})();
+</script>
+</body>
+</html>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>info</title>
+  <title>info — BOYOUNG</title>
   <link rel="stylesheet" href="https://use.typekit.net/qlq2sew.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
   <link rel="icon" href="/favicon.png">
@@ -22,6 +22,24 @@
 @media (max-width: 900px) {
   .site-header { padding: 1rem 1.5rem; }
 }
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+  font-family: 'menco', monospace;
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  color: #111;
+  text-decoration: none;
+}
+.header-slash {
+  font-family: 'menco', monospace;
+  font-size: 1.25rem;
+  font-weight: 300;
+  letter-spacing: 0.2em;
+  color: #111;
+}
 .site-nav {
   display: flex !important;
   gap: 2rem;
@@ -38,7 +56,7 @@
   color: #111 !important;
   text-decoration: none !important;
 }
-.site-nav a:hover { color: #4ABD9B !important; }
+.site-nav a:hover, .site-nav a.nav-active { color: #4ABD9B !important; }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 * {
@@ -89,9 +107,7 @@ main a:hover { text-decoration: underline; }
   font-weight: 300 !important;
 }
 .info-wrap .lang-kr,
-.info-wrap .lang-kr * {
-  font-weight: 400 !important;
-}
+.info-wrap .lang-kr * { font-weight: 400 !important; }
 .info-wrap {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -99,9 +115,7 @@ main a:hover { text-decoration: underline; }
   max-width: 1920px;
   width: 100%;
 }
-main:has(.info-wrap) {
-  max-width: 1920px;
-}
+main:has(.info-wrap) { max-width: 1920px; }
 .info-wrap * { font-weight: 500 !important; }
 .info-bio p, .info-contact p { margin-bottom: 1.5rem; line-height: 1.6; }
 .info-contact { order: 2; }
@@ -131,7 +145,7 @@ main:has(.info-wrap) {
 <body>
 <div class="fixed-top" id="fixed-top">
   <div class="site-header">
-  <a
+  <div class="site-logo"><a
   href="/"
   style="
     font-family: &quot;menco&quot;, monospace !important;
@@ -142,8 +156,8 @@ main:has(.info-wrap) {
     text-decoration: none !important;
   "
   >BOYOUNG</a
->
-  <nav class="site-nav"><a href="/info.html" style="color:#111 !important;">info</a></nav>
+> <span class="header-slash">/ info</span></div>
+  <nav class="site-nav"><a href="/projects" class="">projects</a><a href="/shop" class="">shop</a><a href="/info" class="nav-active">info</a></nav>
 </div>
 </div>
 <main id="main-content">

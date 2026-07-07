@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>1004 dog</title>
+  <title>1004 dog — BOYOUNG</title>
   <link rel="stylesheet" href="https://use.typekit.net/qlq2sew.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
   <link rel="icon" href="/favicon.png">
@@ -22,6 +22,24 @@
 @media (max-width: 900px) {
   .site-header { padding: 1rem 1.5rem; }
 }
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+  font-family: 'menco', monospace;
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  color: #111;
+  text-decoration: none;
+}
+.header-slash {
+  font-family: 'menco', monospace;
+  font-size: 1.25rem;
+  font-weight: 300;
+  letter-spacing: 0.2em;
+  color: #111;
+}
 .site-nav {
   display: flex !important;
   gap: 2rem;
@@ -38,7 +56,7 @@
   color: #111 !important;
   text-decoration: none !important;
 }
-.site-nav a:hover { color: #4ABD9B !important; }
+.site-nav a:hover, .site-nav a.nav-active { color: #4ABD9B !important; }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 * {
@@ -94,7 +112,6 @@ img { display: block; }
 .col-content .lang-kr p:first-of-type { font-size: 1em !important; font-weight: 300 !important; margin-top: 0 !important; }
 .col-content .lang-kr p:nth-of-type(2) { font-weight: 300 !important; }
 .col-content p { margin-bottom: 1.5rem; }
-.lang-en { }
 .lang-kr {
   font-family: 'Pretendard', sans-serif !important;
   font-size: 0.9em !important;
@@ -120,8 +137,7 @@ img { display: block; }
 }
 .col-images::-webkit-scrollbar { display: none; }
 .col-images img, .col-images video {
-  width: 100%;
-  height: auto;
+  width: 100%; height: auto;
   max-height: 80vh;
   object-fit: contain;
   object-position: right top;
@@ -150,7 +166,7 @@ img { display: block; }
 <body>
 <div class="fixed-top" id="fixed-top">
   <div class="site-header">
-  <a
+  <div class="site-logo"><a
   href="/"
   style="
     font-family: &quot;menco&quot;, monospace !important;
@@ -161,12 +177,12 @@ img { display: block; }
     text-decoration: none !important;
   "
   >BOYOUNG</a
->
-  <nav class="site-nav"><a href="/info.html" style="">info</a></nav>
+> <span class="header-slash">/ projects</span></div>
+  <nav class="site-nav"><a href="/projects" class="nav-active">projects</a><a href="/shop" class="">shop</a><a href="/info" class="">info</a></nav>
 </div>
   <div class="project-nav">
-    <span><a href="Nabi_Face.html">&#8249; Nabi Face</a></span>
-    <span><a href="gazpacho_party_invitation.html">gazpacho party invitation &#8250;</a></span>
+    <span><a href="/projects/Nabi_Face.html">&#8249; Nabi Face</a></span>
+    <span><a href="/projects/gazpacho_party_invitation.html">gazpacho party invitation &#8250;</a></span>
   </div>
 </div>
 
@@ -202,8 +218,7 @@ img { display: block; }
 <script>
   function setOffsets() {
     var h = document.getElementById('fixed-top').offsetHeight;
-    var wrap = document.getElementById('project-wrap');
-    wrap.style.top = h + 'px';
+    document.getElementById('project-wrap').style.top = h + 'px';
     var cover = document.querySelector('.cover-mobile');
     if (cover) cover.style.marginTop = (h + 16) + 'px';
   }

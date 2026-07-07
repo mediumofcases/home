@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BOYOUNG</title>
+  <link rel="stylesheet" href="https://use.typekit.net/qlq2sew.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+  <link rel="icon" href="/favicon.png">
+  <style>
+.site-header {
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1920px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+  background: #fff;
+}
+@media (max-width: 900px) {
+  .site-header { padding: 1rem 1.5rem; }
+}
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+  font-family: 'menco', monospace;
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  color: #111;
+  text-decoration: none;
+}
+.header-slash {
+  font-family: 'menco', monospace;
+  font-size: 1.25rem;
+  font-weight: 300;
+  letter-spacing: 0.2em;
+  color: #111;
+}
+.site-nav {
+  display: flex !important;
+  gap: 2rem;
+  position: static !important;
+  height: auto !important;
+  background: none !important;
+  padding: 0 !important;
+}
+.site-nav a {
+  font-family: 'menco', monospace !important;
+  font-size: 1.25rem !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.2em !important;
+  color: #111 !important;
+  text-decoration: none !important;
+}
+.site-nav a:hover, .site-nav a.nav-active { color: #4ABD9B !important; }
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'menco', monospace;
+  font-size: 1rem;
+  letter-spacing: 0.2em;
+  background: #fff;
+  color: #111;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+img { display: block; }
+main { flex: 1; }
+.site-header { background: transparent !important; position: relative; z-index: 100; }
+
+
+#floater-1 {
+  position: fixed;
+  pointer-events: none;
+  z-index: 80;
+}</style>
+</head>
+<body>
+<div class="site-header">
+  <div class="site-logo"><a
+  href="/"
+  style="
+    font-family: &quot;menco&quot;, monospace !important;
+    font-size: 1.25rem !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.2em !important;
+    color: #111 !important;
+    text-decoration: none !important;
+  "
+  >BOYOUNG</a
+></div>
+  <nav class="site-nav"><a href="/projects" class="">projects</a><a href="/shop" class="">shop</a><a href="/info" class="">info</a></nav>
+</div>
+<img id="floater-1" src="/assets/aesthetics/floater-1.png" alt="">
+<main></main>
+<footer
+  style="
+    padding: 2rem 2rem 1rem;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #aaa;
+    max-width: 1920px;
+    margin: 0 auto;
+    font-family: &quot;menco&quot;, monospace;
+  "
+>
+  &copy; 2026 Boyoung
+</footer>
+<script>
+
+(function() {
+  var el = document.getElementById('floater-1');
+  if (!el) return;
+  var size = Math.min(window.innerWidth, window.innerHeight) * 0.25;
+  el.style.width = size + 'px';
+  var x = Math.random() * (window.innerWidth - size);
+  var y = Math.random() * (window.innerHeight - size);
+  var dx = 1.2, dy = 1.2;
+  function step() {
+    x += dx; y += dy;
+    var maxX = window.innerWidth - size;
+    var maxY = window.innerHeight - size;
+    if (x <= 0)    { x = 0;    dx =  Math.abs(dx); }
+    if (x >= maxX) { x = maxX; dx = -Math.abs(dx); }
+    if (y <= 0)    { y = 0;    dy =  Math.abs(dy); }
+    if (y >= maxY) { y = maxY; dy = -Math.abs(dy); }
+    el.style.left = x + 'px';
+    el.style.top  = y + 'px';
+    requestAnimationFrame(step);
+  }
+  step();
+})();
+</script>
+</body>
+</html>
