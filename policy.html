@@ -1,0 +1,561 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>policy — BOYOUNG</title>
+  <link rel="stylesheet" href="https://use.typekit.net/qlq2sew.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+  <link rel="icon" href="assets/ui/favicon.png">
+  <style>
+.site-header {
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1920px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+  background: #fff;
+  position: relative;
+  z-index: 100;
+}
+@media (max-width: 900px) {
+  .site-header { padding: 1rem 1.5rem; }
+}
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+  font-family: 'menco', monospace;
+  font-size: 1.25rem;
+  letter-spacing: 0.2em;
+}
+.logo-link {
+  font-family: 'menco', monospace !important;
+  font-size: 1.25rem;
+  font-weight: 500 !important;
+  letter-spacing: 0.2em;
+  color: #111;
+  text-decoration: none;
+}
+.logo-link:hover { color: #4ABD9B; }
+.header-slash {
+  font-family: 'menco', monospace !important;
+  font-size: 1.25rem;
+  font-weight: 500 !important;
+  letter-spacing: 0.2em;
+  color: #111;
+}
+.section-link {
+  font-family: 'menco', monospace !important;
+  font-size: 1.25rem;
+  font-weight: 500 !important;
+  letter-spacing: 0.2em;
+  color: #111;
+  text-decoration: none;
+}
+.section-link:hover { color: #4ABD9B; }
+.site-nav {
+  display: flex !important;
+  gap: 2rem;
+  position: static !important;
+  height: auto !important;
+  background: none !important;
+  padding: 0 !important;
+}
+.site-nav a {
+  font-family: 'menco', monospace !important;
+  font-size: 1.25rem !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.2em !important;
+  color: #111 !important;
+  text-decoration: none !important;
+}
+.site-nav a:hover, .site-nav a.nav-active { color: #4ABD9B !important; }
+.hamburger-btn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem;
+}
+@media (max-width: 900px) {
+  .site-nav {
+    display: none !important;
+    flex-direction: column !important;
+    gap: 1rem !important;
+    position: absolute !important;
+    top: 100%;
+    right: 1.5rem;
+    background: #fff;
+    padding: 1.25rem 1.5rem !important;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    border-radius: 8px;
+    z-index: 300;
+  }
+  .site-nav.mobile-open { display: flex !important; }
+  .hamburger-btn { display: block; }
+}
+.footer-policy-link {
+  text-align: center;
+  padding: 1.5rem 0 2rem;
+}
+.footer-policy-link a {
+  font-family: 'menco', monospace;
+  font-size: 0.75rem;
+  font-weight: 300;
+  letter-spacing: 0.15em;
+  color: #999;
+  text-decoration: none;
+}
+.footer-policy-link a:hover { color: #4ABD9B; }
+
+.cart-fab {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 500;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+}
+.cart-fab.visible { display: flex; }
+.cart-fab-circle {
+  display: flex; align-items: center; justify-content: center;
+  position: relative;
+  background: transparent;
+  border-radius: 0;
+}
+.cart-fab-circle svg { width: 24px; height: 24px; fill: none; stroke: #fff; stroke-width: 2; }
+.cart-badge {
+  position: absolute;
+  top: -4px; right: -4px;
+  background: #111;
+  color: #fff;
+  font-size: 0.65rem;
+  font-family: 'menco', monospace;
+  letter-spacing: 0;
+  border-radius: 50%;
+  width: 18px; height: 18px;
+  display: flex; align-items: center; justify-content: center;
+}
+.cart-widget {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 500;
+  width: 300px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 1.25rem;
+  display: none;
+  flex-direction: column;
+  gap: 0.75rem;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+}
+.cart-widget.open { display: flex; }
+@media (max-width: 900px) {
+  .cart-widget { bottom: 2rem; right: 1rem; left: 1rem; width: auto; }
+}
+.cart-header { display: flex; justify-content: space-between; align-items: center; }
+.cart-title { font-family: 'menco', monospace; font-size: 0.9rem; font-weight: 500; letter-spacing: 0.15em; }
+.cart-close { background: none; border: none; cursor: pointer; font-size: 1.1rem; color: #888; padding: 0; letter-spacing: 0; line-height: 1; }
+.cart-close:hover { color: #111; }
+.cart-items { display: flex; flex-direction: column; gap: 0; }
+.cart-item { display: grid; grid-template-columns: 44px 1fr auto; gap: 0.6rem; padding: 0.75rem 0; border-top: 1px solid #eee; align-items: start; }
+.cart-item-thumb { width: 44px; height: 44px; object-fit: cover; border-radius: 4px; background: #f5f5f5; }
+.cart-item-info { display: flex; flex-direction: column; gap: 0.25rem; }
+.cart-item-name { font-family: 'menco', monospace; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.1em; line-height: 1.3; }
+.cart-item-price { font-family: 'menco', monospace; font-size: 0.75rem; color: #888; letter-spacing: 0.05em; }
+.cart-item-right { display: flex; flex-direction: column; align-items: flex-end; gap: 0.4rem; }
+.cart-item-remove { background: none; border: none; cursor: pointer; font-size: 0.85rem; color: #bbb; padding: 0; letter-spacing: 0; }
+.cart-item-remove:hover { color: #111; }
+.cart-mini-stepper { display: flex; align-items: center; gap: 0.4rem; font-family: 'menco', monospace; font-size: 0.8rem; letter-spacing: 0.05em; }
+.cart-mini-btn { background: none; border: none; cursor: pointer; font-size: 0.85rem; color: #888; padding: 0; letter-spacing: 0; line-height: 1; }
+.cart-mini-btn:hover { color: #111; }
+.cart-subtotal { display: flex; justify-content: space-between; border-top: 1px solid #eee; padding-top: 0.75rem; font-family: 'menco', monospace; font-size: 0.85rem; letter-spacing: 0.1em; }
+.cart-subtotal-label { color: #888; }
+.cart-subtotal-amount { font-weight: 500; }
+.btn-order { width: 100%; padding: 0.75rem; border-radius: 999px; border: none; background: #4ABD9B; color: #fff; font-family: 'menco', monospace; font-size: 0.85rem; font-weight: 500; letter-spacing: 0.2em; cursor: pointer; }
+.btn-order:hover { background: #3aad8b; }
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body {
+  font-family: 'menco', monospace;
+  font-weight: 300;
+  font-size: 1rem;
+  letter-spacing: 0.2em;
+  background: #fff;
+  color: #111;
+}
+img { display: block; }
+.fixed-top {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  background: #fff;
+}
+.policy-wrap {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 2rem 3rem 5rem;
+}
+.policy-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+.policy-col {
+  line-height: 1.6;
+}
+.policy-col p {
+  margin-bottom: 1.5rem;
+}
+.policy-col p.extra-space {
+  padding-top: 1.5rem;
+}
+.policy-col-kr {
+  font-family: 'Pretendard', sans-serif;
+  font-size: 0.9em;
+  font-weight: 300;
+  line-height: calc(1.6 * 1.1);
+}
+.policy-col-kr strong { font-weight: 600; }
+.policy-col-en {
+  font-family: 'menco', monospace;
+  font-weight: 400;
+}
+.policy-col-en strong { font-weight: 600; }
+@media (max-width: 900px) {
+  .policy-columns { grid-template-columns: 1fr; gap: 3rem; }
+  .policy-wrap { padding: 1.5rem 1.5rem 4rem; }
+}
+</style>
+<style>
+.btn-cart, .btn-order, .btn-place-order {
+  position: relative;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  cursor: pointer;
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  display: block;
+}
+.btn-cart:hover, .btn-order:hover, .btn-place-order:hover,
+.btn-cart:focus, .btn-order:focus, .btn-place-order:focus,
+.btn-cart:active, .btn-order:active, .btn-place-order:active {
+  background: transparent;
+  outline: none;
+  box-shadow: none;
+  border: none;
+  filter: none;
+  opacity: 1;
+}
+.btn-cart:disabled, .btn-place-order:disabled { cursor: not-allowed; }
+.btn-cart:disabled .btn-bg-img, .btn-place-order:disabled .btn-bg-img {
+  opacity: 0.4;
+  filter: grayscale(60%);
+}
+.btn-bg-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  pointer-events: none;
+  user-select: none;
+}
+.btn-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  white-space: nowrap;
+  pointer-events: none;
+}
+.cart-fab-circle {
+  position: relative;
+  width: 62px;
+}
+.fab-bg-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  pointer-events: none;
+  user-select: none;
+}
+.cart-fab-circle svg {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 24px; height: 24px;
+  fill: none; stroke: #fff; stroke-width: 2;
+  pointer-events: none;
+}
+.qty-btn {
+  position: relative;
+  width: 28px;
+  height: 28px;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.qty-btn .fab-bg-img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.qty-btn:hover { background: transparent; }
+.qty-btn-symbol {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  font-size: 1.1rem;
+  line-height: 1;
+  pointer-events: none;
+}
+</style>
+</head>
+<body>
+<div class="fixed-top" id="fixed-top">
+  <div class="site-header">
+  <div class="site-logo"><a href="home.html" class="logo-link">BOYOUNG</a> <span class="header-slash">/</span> <a href="policy.html" class="section-link">policy</a></div>
+  <nav class="site-nav" id="site-nav"><a href="projects.html" class="">projects</a><a href="shop.html" class="">shop</a><a href="info.html" class="">info</a></nav>
+  <button class="hamburger-btn" id="hamburger-btn" aria-label="menu">
+    <svg viewBox="0 0 24 24" width="22" height="22">
+      <line x1="3" y1="6" x2="21" y2="6" stroke="#111" stroke-width="1.5"/>
+      <line x1="3" y1="12" x2="21" y2="12" stroke="#111" stroke-width="1.5"/>
+      <line x1="3" y1="18" x2="21" y2="18" stroke="#111" stroke-width="1.5"/>
+    </svg>
+  </button>
+</div>
+<script>
+(function() {
+  var btn = document.getElementById('hamburger-btn');
+  var nav = document.getElementById('site-nav');
+  if (btn && nav) {
+    btn.addEventListener('click', function() {
+      nav.classList.toggle('mobile-open');
+    });
+  }
+})();
+</script>
+</div>
+<main id="main-content">
+  <div class="policy-wrap">
+    <div class="policy-columns">
+      <div class="policy-col policy-col-kr">
+        <p><strong>결제 및 배송 안내</strong></p>
+<p><strong>결제:</strong> 현재 무통장입금으로만 받고있습니다. 주문 후 안내된 계좌로 입금해주시면 확인 후 주문이 확정됩니다.</p>
+<p><strong>배송 준비:</strong> 모든 제품은 결제 확인 후 매주 월요일에 일괄 발송해 드리고 있습니다. (제작이나 재고 상황에 따라 배송일정이 변동될 수 있으며, 이때는 개별 연락드리겠습니다)</p>
+<p><strong>배송비:</strong> 4,000원 (도서산간 지역은 3,000원 추가됩니다), 50,000원 이상 구매 시 무료 배송</p>
+<p><strong>배송 확인:</strong> 제품 발송 후, 입력해주신 이메일이나 연락처로 운송장 번호를 보내드립니다.</p>
+<p><strong>해외 구매 문의:</strong> 현재 해외 판매는 자동 결제 시스템으로 지원되지 않지만, 소매·도매·입점 문의 모두 환영합니다. 인스타그램 @mediumofcases DM, 이메일 studio@mediumofcases.com로 문의주시면 개별 상담을 통해 배송비와 결제 방법을 안내해드리겠습니다.</p>
+<p>날씨나 연휴에 따라 배송상황이 조금씩 달라질 수 있습니다. 너른 양해 부탁드리며, 소중한 제품이 안전히 도착하도록 늘 세심히 살피겠습니다.</p>
+<p class="extra-space"><strong>반품 및 환불 안내</strong></p>
+<p>제품 수령 후 7일 이내에 제품의 하자나 파손이 발견될 경우, 필수 기재 정보와 함께 문의해주시면 신속히 교환 혹은 환불을 도와드리겠습니다. 단순 변심에 의한 환불은 제품의 가치가 훼손되지 않은 상태에서만 가능하며, 왕복 배송비는 고객 부담으로 진행되는 점 양해 부탁드립니다.</p>
+<p><strong>필수 기재 정보</strong><br>성함 및 연락처 (김00/000-0000-0000)<br>환불 계좌 (신한 0000000000000 김00)<br>제품 하자 내용 / 파손 증빙 사진</p>
+<p><strong>문의 방법</strong><br>이메일: studio@mediumofcases.com<br>인스타그램: @mediumofcases</p>
+<p class="extra-space"><strong>개인정보 처리방침</strong></p>
+<p>주문 처리 및 배송을 위해 고객님의 성함, 주소, 연락처, 이메일 주소를 수집합니다. 수집된 정보는 오직 배송과 결제 확인, 반품 및 교환 등 고객 응대를 위해서만 사용되며, 그 외의 목적으로는 사용되거나 공유되지 않습니다.</p>
+<p class="extra-space"><strong>이용 약관</strong></p>
+<p>mediumofcases를 찾아주셔서 진심으로 감사드립니다.</p>
+<p>이곳에서 이루어지는 모든 만남과 거래가 서로에게 즐거운 경험이 될 수 있도록, 몇 가지 약속을 나누고자 합니다. 본 사이트를 이용하시는 것은 아래의 내용을 충분히 이해하고 동의하시는 것으로 간주됩니다.</p>
+<p>본 사이트에서 판매되는 모든 제품, 이미지, 디자인 및 텍스트의 저작권은 mediumofcases와 창작자 보영에게 있습니다. 사전 승인 없는 무단 도용, 복제 및 상업적 이용은 금지됩니다.</p>
+<p>주문은 결제 확인 완료 시점부터 유효합니다. 모든 제품은 정성을 담아 제작되며, 상품 정보에 기재된 설명을 충분히 숙지하신 후 구매 부탁드립니다.</p>
+<p>배송 과정에서의 지연이나 날씨 등 불가항력적인 상황에 대해 고객님께 충분히 안내드릴 것을 약속하며, 최대한 안전한 배송을 위해 노력하겠습니다.</p>
+<p>필요에 따라 본 약관은 변경될 수 있으며, 변경된 내용은 본 사이트를 공지됩니다.</p>
+<p>mediumofcases는 건강한 창작 생태계를 지향합니다. 저의 작업물이 고객님의 일상에 행복과 안정을 가져다주길 진심으로 바라겠습니다.</p>
+<p class="extra-space"><strong>법적 고지</strong></p>
+<p>mediumofcases는 1인 창작 스튜디오입니다. 관련 문의는 언제든 아래 연락처로 주시기 바랍니다.</p>
+<p>운영자: 보영<br>이메일: studio@mediumofcases.com<br>인스타그램: @mediumofcases</p>
+      </div>
+      <div class="policy-col policy-col-en">
+        <p><strong>Shipping & Delivery</strong></p>
+<p><strong>Payment:</strong> We currently accept bank transfer only. Once you place an order, please transfer the total amount to the account — your order will be confirmed once payment is verified.</p>
+<p><strong>Shipping Prep:</strong> All items are shipped every Monday after order confirmation. (Please note that the shipping schedule may vary depending on production or inventory status, in which case I will contact you individually)</p>
+<p><strong>Shipping Cost:</strong> 4,000 KRW (an additional 3,000 KRW for remote/island areas), free shipping on orders over 50,000 KRW.</p>
+<p><strong>Tracking:</strong> Once your order is shipped, we will provide you with a tracking number via the email or contact information you provided.</p>
+<p><strong>International Shipping:</strong> While our website does not currently support automated checkout for international orders, we're happy to accommodate retail, wholesale, and stockist inquiries individually. Please reach out via Instagram DM @mediumofcases, email at studio@mediumofcases.com, and we'll walk you through shipping costs and payment options.</p>
+<p>Delivery times may vary slightly due to weather conditions or public holidays. We appreciate your understanding and will ensure your items are delivered to you safely with the utmost care.</p>
+<p class="extra-space"><strong>Returns and Refunds Policy</strong></p>
+<p>If you discover any defects or damage within 7 days of receiving your order, please contact us with the required information below, and we will promptly assist you with an exchange or refund. Please note that refunds for change of mind are only possible if the product remains in its original, unused condition, and the customer is responsible for the round-trip shipping costs.</p>
+<p><strong>Required Information for Inquiry</strong><br>Name & Contact Information (e.g., Kim 00 / 000-0000-0000)<br>Refund Account (Bank Name, Account Number, Account Holder)<br>Details of Defect / Photos of Damage (please include clear photos of the damaged area)</p>
+<p><strong>How to Contact Me</strong><br>Email: studio@mediumofcases.com<br>Instagram DM: @mediumofcases</p>
+<p class="extra-space"><strong>Privacy Policy</strong></p>
+<p>To process orders and ensure delivery, we collect your name, address, contact information, and email address. The collected information is used solely for the purposes of delivery, payment confirmation, and customer support, such as returns and exchanges. Your information will not be used or shared for any other purposes.</p>
+<p class="extra-space"><strong>Terms and Conditions</strong></p>
+<p>Thank you so much for visiting mediumofcases.</p>
+<p>We hope that every encounter and transaction here will be a delightful experience for both of us, and we would like to share a few promises to ensure that. By using this site, you are understood to have fully understood and agreed to the following terms.</p>
+<p>All products, images, designs, and text sold on this site are the property of mediumofcases and the creator, Boyoung. Any unauthorized use, reproduction, or commercial exploitation without prior approval is strictly prohibited.</p>
+<p>Orders become valid upon confirmation of payment. Every product is crafted with great care, so we kindly ask you to review all product descriptions thoroughly before making a purchase.</p>
+<p>We promise to keep you fully informed regarding any potential delivery delays or force majeure situations such as weather conditions, and we will do our utmost to ensure safe delivery.</p>
+<p>These terms may be updated as necessary, and any changes will be posted on this site.</p>
+<p>mediumofcases aspires to foster a healthy creative ecosystem. I sincerely hope that my work brings happiness and stability to your daily life.</p>
+<p class="extra-space"><strong>Legal Notice</strong></p>
+<p>mediumofcases is an independent creative studio operated by the artist, Boyoung. For any inquiries, please reach out via the contact information below.</p>
+<p>Operated by: Boyoung<br>Contact: studio@mediumofcases.com<br>Instagram: @mediumofcases</p>
+      </div>
+    </div>
+  </div>
+</main>
+<footer
+  style="
+    padding: 2rem 2rem 1rem;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #aaa;
+    max-width: 1920px;
+    margin: 0 auto;
+    font-family: &quot;menco&quot;, monospace;
+  "
+>
+  &copy; 2026 Boyoung
+</footer>
+
+<!-- cart fab -->
+<button class="cart-fab" id="cart-fab" aria-label="open cart">
+  <div class="cart-fab-circle">
+    <img src="assets/ui/btn-fab.webp" class="fab-bg-img" alt="">
+    <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+    <span class="cart-badge" id="cart-badge">0</span>
+  </div>
+</button>
+
+<!-- cart widget -->
+<div class="cart-widget" id="cart-widget" role="dialog" aria-label="cart">
+  <div class="cart-header">
+    <span class="cart-title">cart</span>
+    <button class="cart-close" id="cart-close" aria-label="close cart">×</button>
+  </div>
+  <div class="cart-items" id="cart-items"></div>
+  <div class="cart-subtotal">
+    <span class="cart-subtotal-label">subtotal</span>
+    <span class="cart-subtotal-amount" id="cart-subtotal">₩ 0</span>
+  </div>
+  <button class="btn-order" onclick="location.href='order.html'">
+    <img src="assets/ui/btn-pill.webp" class="btn-bg-img" alt="">
+    <span class="btn-label">order</span>
+  </button>
+</div>
+
+<script>
+  function setOffset() {
+    var h = document.getElementById('fixed-top').offsetHeight;
+    document.getElementById('main-content').style.paddingTop = (h + 32) + 'px';
+  }
+  setOffset();
+  window.addEventListener('resize', setOffset);
+</script>
+
+<script>
+(function() {
+  function getCart() {
+    try { return JSON.parse(localStorage.getItem('moc_cart') || '[]'); }
+    catch(e) { return []; }
+  }
+  function saveCart(cart) { localStorage.setItem('moc_cart', JSON.stringify(cart)); }
+  function cartCount(cart) { return cart.length; } // number of distinct products, not total quantity
+  function cartTotal(cart) { return cart.reduce(function(s,i){ return s+i.price*i.qty; }, 0); }
+
+  function renderCart() {
+    var cart = getCart();
+    var count = cartCount(cart);
+    var fab = document.getElementById('cart-fab');
+    var badge = document.getElementById('cart-badge');
+    var widget = document.getElementById('cart-widget');
+    if (!fab) return;
+    badge.textContent = count;
+    if (count > 0) { fab.classList.add('visible'); }
+    else { fab.classList.remove('visible'); widget.classList.remove('open'); }
+
+    var itemsEl = document.getElementById('cart-items');
+    itemsEl.innerHTML = '';
+    cart.forEach(function(item) {
+      var div = document.createElement('div');
+      div.className = 'cart-item';
+      div.innerHTML =
+        '<img class="cart-item-thumb" src="' + (item.thumb||'') + '" alt="">' +
+        '<div class="cart-item-info">' +
+          '<div class="cart-item-name">' + item.name + '</div>' +
+          '<div class="cart-item-price">₩ ' + item.price.toLocaleString() + '</div>' +
+        '</div>' +
+        '<div class="cart-item-right">' +
+          '<button class="cart-item-remove" data-slug="' + item.slug + '">×</button>' +
+          '<div class="cart-mini-stepper">' +
+            '<button class="cart-mini-btn" data-slug="' + item.slug + '" data-action="minus">−</button>' +
+            '<span>' + item.qty + '</span>' +
+            '<button class="cart-mini-btn" data-slug="' + item.slug + '" data-action="plus">+</button>' +
+          '</div>' +
+        '</div>';
+      itemsEl.appendChild(div);
+    });
+    document.getElementById('cart-subtotal').textContent = '₩ ' + cartTotal(cart).toLocaleString();
+
+    itemsEl.querySelectorAll('.cart-item-remove').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var c = getCart().filter(function(i){ return i.slug !== btn.dataset.slug; });
+        saveCart(c); renderCart();
+      });
+    });
+    itemsEl.querySelectorAll('.cart-mini-btn').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var c = getCart();
+        var idx = c.findIndex(function(i){ return i.slug === btn.dataset.slug; });
+        if (idx === -1) return;
+        if (btn.dataset.action === 'plus') { c[idx].qty++; }
+        else { c[idx].qty--; if (c[idx].qty <= 0) c.splice(idx, 1); }
+        saveCart(c); renderCart();
+      });
+    });
+  }
+
+  var fab = document.getElementById('cart-fab');
+  var widget = document.getElementById('cart-widget');
+  var closeBtn = document.getElementById('cart-close');
+  if (fab) {
+    fab.addEventListener('click', function() {
+      var isOpen = widget.classList.contains('open');
+      widget.classList.toggle('open');
+      fab.style.display = isOpen ? '' : 'none';
+    });
+  }
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function() {
+      widget.classList.remove('open');
+      fab.style.display = '';
+      renderCart();
+    });
+  }
+
+  renderCart();
+  // expose for product pages to call after add-to-cart
+  window.mocRenderCart = renderCart;
+  window.mocGetCart = getCart;
+  window.mocSaveCart = saveCart;
+})();
+</script>
+
+</body>
+</html>
